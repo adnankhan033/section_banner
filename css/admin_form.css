@@ -1,0 +1,347 @@
+/**
+ * @file
+ * Admin form styles for Section Banner module.
+ */
+
+/* Introduction section */
+.section-banner-intro {
+  background: #f5f5f5;
+  border-left: 4px solid #0073aa;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 4px;
+}
+
+.section-banner-intro p {
+  margin: 0;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Token help section */
+.section-banner-token-help-wrapper {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.section-banner-token-help-wrapper summary {
+  font-weight: 600;
+  color: #005177;
+  padding: 0.75em 1em;
+  cursor: pointer;
+}
+
+.section-banner-token-help-wrapper summary:hover {
+  background: #f0f7ff;
+}
+
+.section-banner-token-help-wrapper .form-item {
+  padding: 0 1em 1em 1em;
+}
+
+.section-banner-token-help {
+  background: #f0f7ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.section-banner-token-help strong {
+  color: #005177;
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+.section-banner-token-help ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.section-banner-token-help li {
+  margin: 0.4em 0;
+  line-height: 1.6;
+}
+
+.section-banner-token-help code {
+  background: #fff;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #d63384;
+  border: 1px solid #e0e0e0;
+  font-weight: 600;
+}
+
+.section-banner-token-help p {
+  margin: 0.5em 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.token-browser-link-wrapper {
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid #b3d9ff;
+}
+
+.token-browser-link-wrapper .button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #0073aa;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.token-browser-link-wrapper .button:hover {
+  background: #005177;
+  color: #fff;
+}
+
+/* Main wrapper */
+.section-banner-wrapper {
+  margin-top: 1em;
+}
+
+.section-banner-fieldset {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+  background: #fff;
+}
+
+/* Banner items */
+.section-banner-item {
+  margin-bottom: 1.5em;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fafafa;
+  padding: 0.5em;
+}
+
+.section-banner-item summary {
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.75em 1em;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.section-banner-item summary:hover {
+  background: #f0f0f0;
+}
+
+.section-banner-item[open] summary {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1em;
+}
+
+.section-banner-item .details-wrapper {
+  padding: 0 1em 1em;
+}
+
+/* Content sections */
+.section-banner-content,
+.section-banner-targeting,
+.section-banner-styling {
+  margin: 1em 0;
+  padding: 1em;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.section-banner-content legend,
+.section-banner-targeting legend,
+.section-banner-styling legend {
+  font-weight: 600;
+  color: #0073aa;
+  padding: 0 0.5em;
+}
+
+/* Examples box */
+.section-banner-examples {
+  margin-top: 1em;
+  padding: 1em;
+  background: #f9f9f9;
+  border-left: 3px solid #0073aa;
+  border-radius: 3px;
+}
+
+.section-banner-examples h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.section-banner-examples ul {
+  margin: 0.5em 0 0;
+  padding-left: 1.5em;
+}
+
+.section-banner-examples li {
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.section-banner-examples code {
+  background: #fff;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #c7254e;
+  border: 1px solid #e0e0e0;
+}
+
+.section-banner-examples strong {
+  color: #0073aa;
+  font-weight: 600;
+}
+
+/* Form fields */
+.section-banner-item .form-item {
+  margin-bottom: 1.5em;
+}
+
+.section-banner-item .form-item:last-child {
+  margin-bottom: 0;
+}
+
+.section-banner-item label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.section-banner-item .description {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
+.section-banner-item textarea,
+.section-banner-item input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5em;
+  font-size: 0.95em;
+}
+
+.section-banner-item textarea:focus,
+.section-banner-item input[type="text"]:focus {
+  border-color: #0073aa;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+}
+
+/* File upload */
+.section-banner-item .form-managed-file {
+  border: 2px dashed #ddd;
+  padding: 1em;
+  border-radius: 4px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.section-banner-item .form-managed-file:hover {
+  border-color: #0073aa;
+  background: #f0f7fa;
+}
+
+/* Actions */
+.section-banner-actions {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 2px solid #e0e0e0;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.section-banner-add,
+.section-banner-remove {
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.section-banner-add {
+  background: #0073aa;
+  color: #fff;
+  border: none;
+}
+
+.section-banner-add:hover {
+  background: #005a87;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 115, 170, 0.3);
+}
+
+.section-banner-remove {
+  background: #fff;
+  color: #d63638;
+  border: 1px solid #d63638;
+}
+
+.section-banner-remove:hover {
+  background: #d63638;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-banner-item .details-wrapper {
+    padding: 0 0.5em 0.5em;
+  }
+
+  .section-banner-content,
+  .section-banner-targeting,
+  .section-banner-styling {
+    padding: 0.75em;
+  }
+
+  .section-banner-actions {
+    flex-direction: column;
+  }
+
+  .section-banner-add,
+  .section-banner-remove {
+    width: 100%;
+  }
+}
+
+/* Animation for AJAX */
+.section-banner-wrapper.ajax-progress {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* Better spacing for text format */
+.section-banner-item .filter-wrapper {
+  margin-top: 0.5em;
+}
+
+.section-banner-item .form-textarea-wrapper {
+  margin-bottom: 0.5em;
+}
+
+

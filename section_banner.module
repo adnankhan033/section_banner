@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * @file
+ * Main module file for Section Banner.
+ *
+ * Provides section-wise banners that can be displayed on any page based on
+ * path patterns, Views machine names, content types, or route names.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_theme().
+ *
+ * @param array $existing
+ *   An array of existing theme implementations.
+ * @param string $type
+ *   The type of theme hook being requested.
+ * @param string $theme
+ *   The name of the theme.
+ * @param string $path
+ *   The path of the theme.
+ *
+ * @return array
+ *   An array of theme hook definitions.
+ */
+function section_banner_theme($existing, $type, $theme, $path) {
+  return [
+    'section_banner_block' => [
+      'variables' => [
+        'title' => NULL,
+        'body' => NULL,
+        'image' => NULL,
+        'additional_class' => NULL,
+        'matched_section' => NULL,
+        'section_suggestion' => NULL,
+        'css_class' => NULL,
+      ],
+      'template' => 'section-banner-block',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ *
+ * Creates template suggestions based on the matched section/tab that triggered
+ * the banner display, not the whole page context.
+ *
+ * @param array $variables
+ *   The variables array passed to the theme function.
+ *
+ * @return array
+ *   An array of template suggestions.
+ */
+function section_banner_theme_suggestions_section_banner_block(array $variables) {
+  $suggestions = [];
+  $matched_section = $variables['matched_section'] ?? NULL;
+  $section_suggestion = $variables['section_suggestion'] ?? NULL;
+  $css_class = $variables['css_class'] ?? NULL;
+
+  // Primary suggestion: Based on the matched section/tab that triggered the banner.
+  // This is the main way to override templates - based on which section is rendering.
+  if ($section_suggestion) {
+    $suggestions[] = 'section_banner_block__section_' . $section_suggestion;
+  }
+
+  // Also include the original matched section (before sanitization) for more specific overrides.
+  if ($matched_section) {
+    // Handle different section types.
+    if (strpos($matched_section, 'bundle:') === 0) {
+      $bundle_name = substr($matched_section, 7);
+      $suggestions[] = 'section_banner_block__bundle_' . $bundle_name;
+    }
+    elseif (strpos($matched_section, 'node.type.') === 0) {
+      $bundle_name = substr($matched_section, 10);
+      $suggestions[] = 'section_banner_block__bundle_' . $bundle_name;
+    }
+    elseif (strpos($matched_section, 'view.') === 0) {
+      $view_name = substr($matched_section, 5);
+      $suggestions[] = 'section_banner_block__view_' . $view_name;
+    }
+    elseif (strpos($matched_section, '/') === 0) {
+      // Path-based section (e.g., /about, /news/*).
+      $path_suggestion = preg_replace('/[^a-z0-9_-]/i', '_', trim($matched_section, '/'));
+      $path_suggestion = str_replace('*', 'wildcard', $path_suggestion);
+      if (!empty($path_suggestion)) {
+        $suggestions[] = 'section_banner_block__path_' . $path_suggestion;
+      }
+    }
+  }
+
+  // Suggestion based on CSS class (e.g., hero-banner -> hero_banner).
+  if ($css_class) {
+    $suggestions[] = 'section_banner_block__' . $css_class;
+  }
+
+  return $suggestions;
+}
+
+
