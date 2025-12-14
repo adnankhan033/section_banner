@@ -161,30 +161,3 @@ $banners = \Drupal::state()->get('section_banner.banners', []);
 2. Configure banner content for that language
 3. Check language fallback settings
 
-## Development
-
-### Code Standards
-
-This module follows Drupal coding standards:
-- PSR-12 coding style
-- Proper PHPDoc comments
-- Drupal best practices
-
-### Running Code Sniffer
-
-```bash
-vendor/bin/phpcs --standard=Drupal,DrupalPractice web/modules/custom/section_banner
-```
-
-## Maintainers
-
-- Your Name (your-email@example.com)
-
-## License
-
-GPL-2.0-or-later
-
-## Support
-
-For bug reports and feature requests, please use the issue tracker.
-
