@@ -1,0 +1,30 @@
+/**
+ * @file
+ * Styles for Section Banner module.
+ */
+
+.section-banner {
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.section-banner-title {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.section-banner-image {
+  margin: 1em 0;
+}
+
+.section-banner-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-banner-body {
+  margin: 1em 0;
+}
+
+

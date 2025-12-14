@@ -1,0 +1,8 @@
+section_banner.settings:
+  title: 'Section Banner'
+  description: 'Configure section-wise banners for pages.'
+  parent: system.admin_config_content
+  route_name: section_banner.settings
+  weight: 0
+
+

@@ -1,0 +1,17 @@
+{
+  "name": "drupal/section_banner",
+  "type": "drupal-module",
+  "description": "Provides section-wise banners that can be shown on any page based on path patterns or Views machine names.",
+  "keywords": ["drupal", "banner", "section", "content"],
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/section_banner",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/section_banner",
+    "source": "https://www.drupal.org/project/section_banner"
+  },
+  "require": {
+    "drupal/core": "^10 || ^11"
+  }
+}
+

@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Template for section banner block.
+ *
+ * Available variables:
+ * - title: (string) The banner title, processed with tokens.
+ * - body: (string) The processed banner body text.
+ * - image: (string|null) The banner image URL.
+ * - additional_class: (string) Additional CSS class for the container.
+ * - matched_section: (string|null) The section that matched for display.
+ * - section_suggestion: (string|null) Sanitized section name for template suggestions.
+ * - css_class: (string|null) Sanitized CSS class for template suggestions.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="section-banner {{ additional_class }}">
+  {% if title %}
+    <h2 class="section-banner-title">{{ title }}</h2>
+  {% endif %}
+  {% if image %}
+    <div class="section-banner-image">
+      <img src="{{ image }}" alt="{{ title }}" />
+    </div>
+  {% endif %}
+  {% if body %}
+    <div class="section-banner-body">{{ body|raw }}</div>
+  {% endif %}
+</div>

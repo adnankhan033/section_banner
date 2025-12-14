@@ -1,0 +1,17 @@
+section_banner:
+  css:
+    theme:
+      css/section_banner.css: {}
+
+admin_form:
+  css:
+    theme:
+      css/admin_form.css: {}
+
+language_switcher:
+  js:
+    js/language_switcher.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+

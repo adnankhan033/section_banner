@@ -1,0 +1,13 @@
+name: Section Banner
+type: module
+description: 'Provides section-wise banners that can be shown on any page based on path patterns or Views machine names.'
+core_version_requirement: ^10 || ^11
+package: Custom
+version: 1.0.0
+dependencies:
+  - drupal:block
+  - drupal:file
+  - drupal:image
+  - drupal:filter
+
+

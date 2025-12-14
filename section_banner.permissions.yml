@@ -1,0 +1,6 @@
+administer section banner:
+  title: 'Administer Section Banner'
+  description: 'Configure section banner settings and manage banners.'
+  restrict access: true
+
+

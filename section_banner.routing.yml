@@ -1,0 +1,9 @@
+section_banner.settings:
+  path: '/admin/config/content/section-banner'
+  defaults:
+    _form: '\Drupal\section_banner\Form\SectionBannerSettingsForm'
+    _title: 'Section Banner Settings'
+  requirements:
+    _permission: 'administer section banner'
+
+
