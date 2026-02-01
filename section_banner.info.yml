@@ -9,5 +9,3 @@ dependencies:
   - drupal:file
   - drupal:image
   - drupal:filter
-
-

@@ -336,6 +336,16 @@ class SectionBannerSettingsForm extends FormBase {
         '#attributes' => ['class' => ['section-banner-targeting']],
       ];
 
+
+      $form['banners'][$i]['targeting']['target_sections'] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Target Sections'),
+  
+        '#default_value' => isset($banner['target_sections']) ? implode("\n", $banner['target_sections']) : '',
+        '#required' => FALSE,
+        '#rows' => 8,
+        '#placeholder' => "/about\nbundle:article\narticles\n/admin/config/content/section-banner",
+      ];
       $target_examples = [
         '<strong>' . $this->t('Specific Paths:') . '</strong>',
         '<code>/about</code>, <code>/contact</code>, <code>/admin/config/content/section-banner</code>',
@@ -351,22 +361,13 @@ class SectionBannerSettingsForm extends FormBase {
         '<code>section_banner.settings</code>',
       ];
 
-      $form['banners'][$i]['targeting']['target_sections'] = [
-        '#type' => 'textarea',
-        '#title' => $this->t('Target Sections'),
-        '#description' => $this->t('Enter where this banner should appear (shared across all languages). One target per line. You can use paths, content types, views, or route names.') . 
-          '<div class="section-banner-examples"><h4>' . $this->t('Examples:') . '</h4><ul><li>' . 
-          implode('</li><li>', $target_examples) . '</li></ul></div>',
-        '#default_value' => isset($banner['target_sections']) ? implode("\n", $banner['target_sections']) : '',
-        '#required' => FALSE,
-        '#rows' => 8,
-        '#placeholder' => "/about\nbundle:article\narticles\n/admin/config/content/section-banner",
-      ];
-
       // Styling section.
       $form['banners'][$i]['styling'] = [
         '#type' => 'fieldset',
-        '#title' => $this->t('Styling'),
+        '#title' => $this->t('Advance Settings'),
+        '#description' => $this->t('Enter where this banner should appear (shared across all languages). One target per line. You can use paths, content types, views, or route names.') . 
+        '<div class="section-banner-examples"><h4>' . $this->t('Examples of Target Routes:') . '</h4><ul><li>' . 
+        implode('</li><li>', $target_examples) . '</li></ul></div>',
         '#attributes' => ['class' => ['section-banner-styling']],
       ];
 
